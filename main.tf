@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "aws-jenkins-ec2" {
-  ami = "ami-02d7fd1c2af6eead0"
+  ami = "ami-0c101f26f147fa7fd"
   instance_type = "t2.micro"
   vpc_security_group_ids = [aws_security_group.jenkins_sg.id]
   tags = {
@@ -26,7 +26,7 @@ user_data = <<-EOF
 
 resource "aws_security_group" "jenkins_sg" {
   name = "jenkins-sg"
-  vpc_id = "vpc-0a17b1954a7121c05"
+  vpc_id = "vpc-01d750b579ed13eee"
 
  ingress  {
     from_port = 22
